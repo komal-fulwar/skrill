@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en"> 
+  <head>
+    <title>HOME</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+ </head>
+
+
+  <body>
+    
+<section  style="height: 105px; background-color:#f9f9f9;">
+    <i class="fas fa-arrow-left" style="font-size:20px; padding-left: 15px; margin-top: 20px; "></i><span class="" style="padding-top:10px; padding-left: 45px; font-size: 20px; font-family: 'Roboto', sans-serif; "> Transaction details</span>
+   <br><br>
+<img  src="images\proflie.png" style="width:78px; height: 75px;  margin-left: 40%;  ">
+</section><br><br>
+<section>
+<div class="d-flex justify-content-center " style=" font-size: 15px;   font-weight: 650;" id="to">To Kundan Suryawanshi</div>
+<div class="d-flex justify-content-center " id="mail"style=" font-size: 13px; font-weight: 500; color: gray; margin-top: 2px;margin-bottom: 8px; font-family:'Open Sans'">kabeersuryawanshi@gmail.com</div>
+<div class="d-flex justify-content-center amounts "  style="font-size: 18px; font-weight: 650; margin-bottom: 8px;">INR -500</div>
+<div class="d-flex justify-content-center " id="date" style="color: gray; font-size: 13px;">21 Nov 19 15:49</div>
+<div class="d-flex justify-content-center " style="color: gray; font-size: 13px;">processed</div>
+</section>
+ <br><br>
+
+<center><button class="btn text-white" data-toggle="modal"  data-target="#exampleModalCenter" style=" font-size:13px;background-color:#801e67; width:92%; border-radius: 10px; height: 42px; word-spacing: 2px;letter-spacing: 1px;">SEND AGAIN</button></center>
+
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header bg-dark">
+        <h5 class="modal-title" id="exampleModalLongTitle"></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body bg-dark">
+        <form class="text-white">
+          <div> To: <input class="form-control" type="text" name="txt" value="" onchange="toFunction(this.value)"></div>
+          <div> Email_id: <input class="form-control" type="email" name="txt" value="" onchange="mailFunction(this.value)"></div>
+          <div>Amount: <input class="form-control" type="text" name="txt" value="" onchange="myFunction(this.value)"></div>
+        <div>Date and time: <input class="form-control" type="text" name="" value="" onchange="date(this.value)"></div>
+       <div> From: <input class="form-control" type="text" name="txt" value="" onchange="myFunction2(this.value)"></div>
+       <div>Fee: <input class="form-control" type="text" name="txt" value="" onchange="fee(this.value)"></div>
+       <div> Transaction_id: <input class="form-control" type="number" name="txt" value="" placeholder="10 digits" onchange="transction(this.value)"></div>
+
+      </form>
+      </div>
+      <div class="modal-footer bg-dark">
+        <button type="button" class="btn" style="background-color: lightgreen;" data-dismiss="modal">Done</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+    <div style="padding: 7px; margin-top: 8px;">
+<table class="table table-borderless" style="line-height: 10px; font-size: 15px;">
+  
+  <tbody >
+    <tr>
+     
+      <td  style="color: gray;"colspan="2">From:</td>
+      <td class="font-weight-bold" id="1" style="text-align: right;" >INR Balance</td>
+    </tr>
+    <tr>
+      
+      
+      <td style="color: gray;" colspan="2">Amount:</td>
+      <td class="font-weight-bold amounts" style="text-align: right;">INR -500</td>
+    </tr>
+    <tr>
+    
+      <td style="color: gray;" colspan="2">Fees:</td>
+      <td class="font-weight-bold"  id ="fee" style="text-align: right;">INR 39.80</td>
+    </tr>
+    <tr>
+    
+      <td style="color: gray;"  colspan="2">Transaction id:</td>
+      <td class="font-weight-bold" id="tran" style="text-align: right;">2957527752</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="skrill.js"></script>
+
+   
+</body >
+</html>
